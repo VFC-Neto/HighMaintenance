@@ -1,0 +1,57 @@
+﻿@model IEnumerable<HighMaintenance.Models.BENS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.INVESTIDOR.INV_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BENS_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BENS_TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BENS_DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BENS_VALOR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.INVESTIDOR.INV_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BENS_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BENS_TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BENS_DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BENS_VALOR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BENS_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BENS_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BENS_ID })
+        </td>
+    </tr>
+}
+
+</table>

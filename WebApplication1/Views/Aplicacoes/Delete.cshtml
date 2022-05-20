@@ -1,0 +1,87 @@
+﻿@model HighMaintenance.Models.APLICACOES
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+ 
+<div>
+    <h4>Deletar aplicação</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_DESCRICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_DESCRICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VALIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VALIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_RENTABILIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_RENTABILIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VALORMINIMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VALORMINIMO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VALORMAXIMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VALORMAXIMO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VENCIMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VENCIMENTO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

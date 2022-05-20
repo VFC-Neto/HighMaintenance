@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HighMaintenance.Models.INVESTIDOR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_RG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_NASCIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_TELEFONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_CELULAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_CIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_CEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INV_VALORGERAL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_RG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_NASCIMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_TELEFONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_CELULAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_CIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_CEP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INV_VALORGERAL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.INV_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.INV_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.INV_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<HighMaintenance.Models.APLICACOES>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VALIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_RENTABILIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VALORMINIMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VALORMAXIMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VENCIMENTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VALIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_RENTABILIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VALORMINIMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VALORMAXIMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VENCIMENTO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.APP_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.APP_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.APP_ID })
+        </td>
+    </tr>
+}
+
+</table>
